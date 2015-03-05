@@ -1,6 +1,7 @@
 package com.umpay.leakythreads;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Process;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -19,6 +20,8 @@ public class MainActivity extends ActionBarActivity
     private TextView mDisplay;
     private int mExampleId;
 
+    private Handler handler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,15 @@ public class MainActivity extends ActionBarActivity
         ((RadioButton)findViewById(mExampleId)).setChecked(true);
         mExampleGroup.setOnCheckedChangeListener(this);
 
-        runExample();
+//        runExample();
+
+        // test
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mDisplay.setText("done");
+            }
+        }, 10 * 1000);
     }
 
     @Override
