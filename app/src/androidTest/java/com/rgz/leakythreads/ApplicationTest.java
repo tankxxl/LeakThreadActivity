@@ -1,4 +1,4 @@
-package com.umpay.leakythreads;
+package com.rgz.leakythreads;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package com.umpay.leakythreads;
+package com.rgz.leakythreads;
 
 import android.os.Bundle;
 import android.os.Handler;
